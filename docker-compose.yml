@@ -1,0 +1,12 @@
+services:
+  app:
+    image: tuhinsu/python3:lts
+    container_name: harvester
+    user: vscode
+    volumes:
+      - ./src:/app
+      - dotfiles:/home/vscode
+
+volumes:
+  dotfiles:
+    external: true
